@@ -1,44 +1,107 @@
-
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
+    <head>
+        <meta charset="utf-8">
+        <title ></title>
 		<style type="text/css">
 			*{
-				width: 0;
-				height: 0;
+			    margin: 0;
+			    padding: 0;
 			}
-			p{
-				width: 600px;
-				height: auto;
-				background-color: blanchedalmond;
-				font-size: 25px;
+			#head{
+			    width: 230px;
+			    height: 100px;
+			    border: gold solid;
+			    border-radius: 25px;
+			    font-size: 72px;
+			    margin-left:40%;
 			}
-			span.tooltip{
-				color:blueviolet;
-				font-size: 30px;
-				position:relative;
+			p .tooltip{
+			    color: aquamarine;
+			    position: relative;
 			}
-			span.tooltip::after{
-				content:attr(title);
-				word-break:keep-all;
-				padding:2px 16px;
-				color:deeppink;
-				position: absolute;
-				left:calc(100%+10px);
-				border-radius: 8px;
-				opacity:0;
-				transition:all 1s;
+			p .tooltip::after{
+			    width: 0;
+			    height: 0;
+			    content:attr(title);
+			    font-size: 20px;
+			    padding:5px 50px;
+			    word-break: keep-all;
+			    background-color: #000;
+			    opacity: 0;
+			    bottom: calc(100%);
+			    top: 50px;
+			    transition: all 0.5s;
+			    position: relative;
+			    border:10px solid black;
+			    border-radius: 5px;
 			}
-			span.tooltip:hover::before{
-				opacity:1;
-				background-color: aqua;
-				left:calc(100-11px);
+			p .tooltip:hover::after{
+			    opacity: 0.8;
+			    top:50px;
 			}
-			</style>
-	</head>
-	<body>
-		<p><span title="很重要" class="tooltip">你</span>是我未曾拥有无法捕捉的亲昵，我却有你的吻你的魂你的心。载着我飞呀飞呀飞，越过了意义。你是我朝夕相伴触手可及的虚拟</p>
-	</body>
+			#div1{
+			    position: absolute;
+			    left: 500px;
+			    top: 0;
+			    width: 600px;
+			    height: 40px;
+			    background-color: aqua;
+			    text-align: center;
+			}
+			.father{
+			    color: aliceblue;
+			    display: inline-block;
+			    position: relative;
+			    line-height: 40px;
+			    width: 100px;
+			    height: 40px;
+			}
+			.son{
+			    list-style: none;
+			    display: none;
+			    position:absolute;
+			    background-color: aqua;
+			    width: 100px;
+			    top: 40px;
+			}
+			li:hover{
+			    background-color: blue;
+			    color: red;
+			    transition: background-color.5s;
+			}
+			.father:hover .son{
+			    background-color: blue;
+			    transition: background-color.5s;
+			    display: block;
+			}
+		</style>
+    </head>
+    <body>
+    <div id="div1">
+        <li class="father">首页
+            <ul class="son">
+                <li>二级导航</li>
+				<li>二级导航</li>
+            </ul>
+        </li>
+        <li class="father">周边游
+            <ul class="son">
+                <li>二级导航</li>
+                <li>二级导航</li>
+            </ul>
+        </li>
+        <li class="father">出境游
+            <ul class="son">
+                <li>二级导航</li>
+                <li>二级导航</li>
+            </ul>
+        </li>
+        <li class="father">独家栏目
+            <ul class="son">
+                <li>二级导航</li>
+                <li>二级导航</li>
+            </ul>
+        </li>
+    </body>
 </html>
